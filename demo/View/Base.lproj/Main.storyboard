@@ -27,8 +27,8 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="SignUp"/>
                                         <connections>
-                                            <action selector="SignUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YYJ-43-bbG"/>
-                                            <segue destination="kYM-OR-Jsc" kind="show" id="V3g-Rx-8Q5"/>
+                                            <action selector="signUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hoe-As-aqA"/>
+                                            <segue destination="kYM-OR-Jsc" kind="show" id="l4O-XD-O6s"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaD-GG-6Ah">
@@ -36,8 +36,8 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                         <connections>
-                                            <action selector="LoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVy-HX-2TU"/>
-                                            <segue destination="KhZ-sP-VhC" kind="show" id="m5n-4b-Aam"/>
+                                            <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fZz-0F-PLN"/>
+                                            <segue destination="KhZ-sP-VhC" kind="show" id="9xJ-9f-aM5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -56,8 +56,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="aSs-PH-Nke"/>
                     <connections>
-                        <outlet property="LoginButton" destination="aaD-GG-6Ah" id="fD3-aT-zht"/>
-                        <outlet property="SignUpButton" destination="zPz-8t-QJb" id="aO9-bl-7sy"/>
+                        <outlet property="loginButton" destination="aaD-GG-6Ah" id="jaG-9z-YIi"/>
+                        <outlet property="signUpButton" destination="zPz-8t-QJb" id="Fh0-jx-fth"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -88,12 +88,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P83-Y2-sCu">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHs-Vp-vsH">
                                         <rect key="frame" x="0.0" y="120" width="334" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHs-Vp-vsH">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P83-Y2-sCu">
                                         <rect key="frame" x="0.0" y="180" width="334" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -102,9 +102,6 @@
                                         <rect key="frame" x="0.0" y="240" width="334" height="40"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="SignUp"/>
-                                        <connections>
-                                            <action selector="SignUpTapped:" destination="kYM-OR-Jsc" eventType="touchUpInside" id="iIN-pW-wSB"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9B-08-IpH">
                                         <rect key="frame" x="0.0" y="300" width="334" height="20.5"/>
@@ -131,12 +128,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="Dng-N6-ERe"/>
                     <connections>
-                        <outlet property="EmailTextFiled" destination="hHs-Vp-vsH" id="HP5-6C-SAm"/>
-                        <outlet property="ErrorLabel" destination="k9B-08-IpH" id="2ES-hz-9ah"/>
-                        <outlet property="FirstNameTextField" destination="J8k-bp-UYN" id="tkG-LZ-csj"/>
-                        <outlet property="LastNameTextFiled" destination="P99-Mq-f9h" id="YeM-m2-iNq"/>
-                        <outlet property="PasswordTextFiled" destination="P83-Y2-sCu" id="N1v-AL-SRm"/>
-                        <outlet property="SignUpButton" destination="tyR-cv-Pze" id="KUK-mH-u9V"/>
+                        <outlet property="emailTextField" destination="hHs-Vp-vsH" id="bJB-ex-OO9"/>
+                        <outlet property="errorLabel" destination="k9B-08-IpH" id="Zf8-6v-baq"/>
+                        <outlet property="firstNameTextField" destination="J8k-bp-UYN" id="cTg-aA-uJz"/>
+                        <outlet property="lastNameTextField" destination="P99-Mq-f9h" id="q40-sV-P8v"/>
+                        <outlet property="passwordTextField" destination="P83-Y2-sCu" id="jpT-GP-cU9"/>
+                        <outlet property="signUpButton" destination="tyR-cv-Pze" id="yCY-J1-djo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4p-52-lFX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -154,7 +151,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nCx-NC-vEk">
                                 <rect key="frame" x="40" y="128" width="334" height="200.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FirstName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xmc-C4-Lbl">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xmc-C4-Lbl">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="tFZ-Vb-lIS"/>
@@ -162,7 +159,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LastName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WQu-1S-nye">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WQu-1S-nye">
                                         <rect key="frame" x="0.0" y="60" width="334" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -199,10 +196,9 @@
                     <navigationItem key="navigationItem" id="pl6-3o-bUr"/>
                     <connections>
                         <outlet property="ErrorLabel" destination="p9k-GS-xSa" id="vt8-LB-PHw"/>
-                        <outlet property="FirstNameTextFiled" destination="Xmc-C4-Lbl" id="4by-Rt-eLR"/>
-                        <outlet property="LastNameTextField" destination="WQu-1S-nye" id="fOH-7S-Hh5"/>
                         <outlet property="LoginButton" destination="QSI-oh-aLc" id="HTW-cd-AXQ"/>
-                        <outlet property="lastNameTextField" destination="WQu-1S-nye" id="Q8Y-An-Piq"/>
+                        <outlet property="emailTextField" destination="Xmc-C4-Lbl" id="Qz3-pG-dTs"/>
+                        <outlet property="passwordTextField" destination="WQu-1S-nye" id="6wC-VP-NoB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkk-KF-83q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -230,7 +226,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q94-e6-ZVI"/>
                     <connections>
-                        <outlet property="WelcomeLabel" destination="I2p-q4-KrP" id="DhQ-g3-nQl"/>
+                        <outlet property="welcomeLabel" destination="I2p-q4-KrP" id="KWy-vP-6gx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDl-0z-RgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

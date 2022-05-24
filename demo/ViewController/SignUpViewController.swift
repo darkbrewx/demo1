@@ -9,26 +9,41 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-    @IBOutlet weak var FirstNameTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
     
-    @IBOutlet weak var LastNameTextFiled: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
     
-    @IBOutlet weak var PasswordTextFiled: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     
-    @IBOutlet weak var EmailTextFiled: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var SignUpButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     
-    @IBOutlet weak var ErrorLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        setUpElements()
     }
     
     
     @IBAction func SignUpTapped(_ sender: Any) {
+    }
+    
+    func setUpElements() {
+    
+        // Hide the error label
+        errorLabel.alpha = 0
+    
+        // Style the elements
+        Utilities.styleTextField(firstNameTextField)
+        Utilities.styleTextField(lastNameTextField)
+        Utilities.styleTextField(emailTextField)
+        Utilities.styleTextField(passwordTextField)
+        Utilities.styleFilledButton(signUpButton)
     }
     
     

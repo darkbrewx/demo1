@@ -9,18 +9,31 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var FirstNameTextFiled: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     
-    @IBOutlet weak var LastNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var LoginButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
-    @IBOutlet weak var ErrorLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setUpElements()
+    }
+    
+    func setUpElements() {
+        
+        // Hide the error label
+        errorLabel.alpha = 0
+        
+        // Style the elements
+        Utilities.styleTextField(emailTextField)
+        Utilities.styleTextField(passwordTextField)
+        Utilities.styleFilledButton(loginButton)
+        
     }
     
     @IBAction func LoginTapped(_ sender: Any) {
